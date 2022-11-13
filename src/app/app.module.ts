@@ -10,6 +10,13 @@ import { FavoritePageComponent } from './pages/favorite-page/favorite-page.compo
 import { PostPageComponent } from './pages/post-page/post-page.component';
 import { MainPageComponent } from './pages/main-page/main-page.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatIconModule} from "@angular/material/icon";
+import {MatButtonModule} from "@angular/material/button";
+import {MatInputModule} from "@angular/material/input";
+import {MatFormFieldModule} from "@angular/material/form-field";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import {MatSelectModule} from "@angular/material/select";
 
 @NgModule({
   declarations: [
@@ -19,12 +26,21 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     EditPageComponent,
     FavoritePageComponent,
     PostPageComponent,
-    MainPageComponent
+    MainPageComponent,
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MatToolbarModule,
+    MatIconModule,
+    MatButtonModule,
+    MatInputModule,
+    MatFormFieldModule,
+    ReactiveFormsModule,
+    FormsModule,
+    MatSelectModule
   ],
   providers: [],
   bootstrap: [AppComponent]
