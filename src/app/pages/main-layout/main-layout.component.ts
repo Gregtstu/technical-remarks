@@ -6,10 +6,19 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./main-layout.component.scss']
 })
 export class MainLayoutComponent implements OnInit {
+  public isMenuOpen: boolean;
+  public navigationItem: string;
 
-  constructor() { }
+  constructor() {
+    this.isMenuOpen = false;
+    this.navigationItem = 'Все изделия';
+  }
 
   ngOnInit(): void {
+  }
+
+  viewItem(event:Event):void{
+    this.navigationItem = (event.target as HTMLInputElement).innerText;
   }
 
 }

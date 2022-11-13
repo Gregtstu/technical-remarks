@@ -1,14 +1,32 @@
 <mat-toolbar color="primary">
-  <ul class="navigation">
+  <span class="dinamicNavigation">{{navigationItem}}</span>
+  <ul class="navigation" [class.isOpen]="isMenuOpen">
     <li class="navigation__item" [routerLink]="['/']">
-      <a class="navigation__link"  routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">Все изделия</a>
+      <a class="navigation__link"
+         routerLinkActive="active"
+         [routerLinkActiveOptions]="{exact:true}"
+         (click)="viewItem($event)"
+      >
+        Все изделия
+      </a>
     </li>
     <li class="navigation__item" [routerLink]="['/create']">
-      <a class="navigation__link" routerLinkActive="active" >Добавить изделие</a>
+      <a class="navigation__link"
+         routerLinkActive="active"
+         (click)="viewItem($event)"
+      >
+        Добавить изделие
+      </a>
     </li>
     <li class="navigation__item" [routerLink]="['/favorite']">
-      <a class="navigation__link" routerLinkActive="active" >Избранные</a>
+      <a class="navigation__link"
+         routerLinkActive="active"
+         (click)="viewItem($event)"
+      >
+        Избранные
+      </a>
     </li>
   </ul>
+  <mat-icon class="burger" (click)="isMenuOpen = !isMenuOpen">{{isMenuOpen ? 'close' : 'menu'}}</mat-icon>
 </mat-toolbar>
 <router-outlet></router-outlet>

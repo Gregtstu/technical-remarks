@@ -20,5 +20,42 @@
     color: tomato;
     cursor: pointer;
   }
+}
+.burger{
+  display: none;
+}
+.dinamicNavigation{
+  display: none;
+}
+
+@media (max-width: 580px) {
+  .burger{
+    display: block;
+    position: absolute;
+    right: 20px;
+  }
+  .dinamicNavigation{
+    display: block;
+  }
+  .navigation{
+    display: none;
+  }
+  .isOpen{
+    display: block;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    height: calc(100% - 90px);
+    background-color: #b7afaf;
+    font-size: 35px;
+  }
+
+  .navigation__item{
+    margin: 30% auto;
+    width: 100%;
+    line-height: 50px;
+    text-align: center;
+  }
 
 }
