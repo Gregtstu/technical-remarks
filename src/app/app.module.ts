@@ -9,6 +9,7 @@ import { EditPageComponent } from './pages/edit-page/edit-page.component';
 import { FavoritePageComponent } from './pages/favorite-page/favorite-page.component';
 import { PostPageComponent } from './pages/post-page/post-page.component';
 import { MainPageComponent } from './pages/main-page/main-page.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { MainPageComponent } from './pages/main-page/main-page.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
