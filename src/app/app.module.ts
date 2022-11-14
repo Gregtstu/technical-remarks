@@ -20,6 +20,7 @@ import {MatSelectModule} from "@angular/material/select";
 import {MatCardModule} from '@angular/material/card';
 import {HttpClientModule} from "@angular/common/http";
 import {AngularEditorModule} from "@kolkov/angular-editor";
+import { EditorModule } from "@tinymce/tinymce-angular";
 
 
 @NgModule({
@@ -47,7 +48,8 @@ import {AngularEditorModule} from "@kolkov/angular-editor";
     MatSelectModule,
     MatCardModule,
     HttpClientModule,
-    AngularEditorModule
+    AngularEditorModule,
+    EditorModule
   ],
   providers: [],
   bootstrap: [AppComponent]
