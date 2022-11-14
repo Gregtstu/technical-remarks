@@ -17,6 +17,10 @@ import {MatInputModule} from "@angular/material/input";
 import {MatFormFieldModule} from "@angular/material/form-field";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {MatSelectModule} from "@angular/material/select";
+import {MatCardModule} from '@angular/material/card';
+import {HttpClientModule} from "@angular/common/http";
+import {AngularEditorModule} from "@kolkov/angular-editor";
+
 
 @NgModule({
   declarations: [
@@ -40,7 +44,10 @@ import {MatSelectModule} from "@angular/material/select";
     MatFormFieldModule,
     ReactiveFormsModule,
     FormsModule,
-    MatSelectModule
+    MatSelectModule,
+    MatCardModule,
+    HttpClientModule,
+    AngularEditorModule
   ],
   providers: [],
   bootstrap: [AppComponent]
